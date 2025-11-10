@@ -1,3 +1,4 @@
+import RightFeaturePanel from "./components/RightFeaturePanel";
 import Link from "next/link";
 
 export default function Home() {
@@ -10,13 +11,11 @@ export default function Home() {
             src="https://content.ikon.mn/news/2023/4/26/3we68k_Grizzlybear55_x974.jpg"
             alt="logo"
           />
-          <Link href="/account">
-            <button
-              className="text-7xl bg-purple-500 hover:underline rounded-lg px-[20px] py-[20px]"
-              onClick=""
-            >
-              SMART
-            </button>
+          <Link
+            href="/list"
+            className="text-7xl bg-purple-500 hover:underline rounded-lg px-[20px] py-[20px]"
+          >
+            SMART
           </Link>
         </div>
       </main>
