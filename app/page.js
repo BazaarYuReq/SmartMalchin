@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="bg-yellow-500 w-[100vw] h-[100vh]">
-      <main className="w-[100vw] h-[100vh]">
+      <main className="w-[100vw] h-[100vh] bg-gradient-to-br from-yellow-500 to-purple-500">
         <div className="flex items-center justify-center h-full flex-col">
           <img
             className="w-[600px] h-[500px] border-2 rounded-lg broder-white"
