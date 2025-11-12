@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 
-export default function SmallMarketplace() {
+export default function makhMarketplace() {
   const LS_KEY = "small_marketplace_items_v1";
 
   const sampleItems = [
@@ -59,6 +59,7 @@ export default function SmallMarketplace() {
   }, [notification]);
 
   function cryptoRandomId() {
+    // small helper to produce unpredictable ids in-browser
     return (
       Date.now().toString(36) + "_" + Math.random().toString(36).slice(2, 9)
     );
@@ -155,6 +156,7 @@ export default function SmallMarketplace() {
     return `$${Number(p).toFixed(2)}`;
   }
 
+  // filtering + sorting
   const visibleItems = items
     .filter(
       (it) =>
@@ -174,12 +176,13 @@ export default function SmallMarketplace() {
     <div className="min-h-screen bg-gradient-to-br from-yellow-500 to-purple-500  p-6">
       <div className="max-w-5xl mx-auto">
         <header className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
-          <h1 className="text-2xl font-extrabold">Small Marketplace</h1>
+          <h1 className="text-2xl font-extrabold">MAKH Marketplace</h1>
           <p className="text-sm text-gray-600">
             Add items, list, buy and manage — saved in your browser
           </p>
         </header>
 
+        {/* Items Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {visibleItems.map((item) => (
             <div
@@ -242,6 +245,7 @@ export default function SmallMarketplace() {
           ))}
         </div>
 
+        {/* Empty state */}
         {visibleItems.length === 0 && (
           <div className="text-center text-gray-500 mt-8">
             No items found — try changing the search or filters.

@@ -11,21 +11,18 @@ export default function AuthToggle() {
     password: "",
   });
   const [message, setMessage] = useState("");
-  const [mounted, setMounted] = useState(false); // ✅ to ensure client mount
+  const [mounted, setMounted] = useState(false);
   const router = useRouter();
 
-  // ✅ mark as mounted on client
   useEffect(() => {
     setMounted(true);
   }, []);
 
-  // ✅ redirect if already logged in (only after mounted)
-  // ✅ redirect if already logged in (only after mounted)
   useEffect(() => {
     if (!mounted) return;
     const currentUser = localStorage.getItem("currentUser");
     if (currentUser) {
-      router.replace("/category"); // ⬅️ changed from /list-M to /category
+      router.replace("/category"); 
     }
   }, [mounted, router]);
 
@@ -44,7 +41,7 @@ export default function AuthToggle() {
       if (found) {
         localStorage.setItem("currentUser", JSON.stringify(found));
         setMessage(`Welcome back, ${found.name}!`);
-        router.replace("/category"); // ✅ redirect
+        router.replace("/category");
       } else {
         setMessage("Invalid credentials.");
       }
@@ -61,7 +58,7 @@ export default function AuthToggle() {
     }
   };
 
-  if (!mounted) return null; // prevent SSR flash
+  if (!mounted) return null; 
 
   return (
     <main className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-yellow-500 to-purple-500 p-6 text-black">
