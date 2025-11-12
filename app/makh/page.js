@@ -11,7 +11,7 @@ export default function AuthToggle() {
     password: "",
   });
   const [message, setMessage] = useState("");
-  const [mounted, setMounted] = useState(false); // ✅ to ensure client mount
+  const [mounted, setMounted] = useState(false);
   const router = useRouter();
 
   // ✅ mark as mounted on client
@@ -20,12 +20,11 @@ export default function AuthToggle() {
   }, []);
 
   // ✅ redirect if already logged in (only after mounted)
-  // ✅ redirect if already logged in (only after mounted)
   useEffect(() => {
     if (!mounted) return;
     const currentUser = localStorage.getItem("currentUser");
     if (currentUser) {
-      router.replace("/category"); // ⬅️ changed from /list-M to /category
+      router.replace("/category"); // redirect to category first
     }
   }, [mounted, router]);
 
