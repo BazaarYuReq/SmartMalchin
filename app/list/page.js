@@ -6,7 +6,7 @@ export default function List() {
   const [open, setOpen] = useState(false);
 
   return (
-    <main className="relative min-h-screen bg-gradient-to-br from-yellow-500 to-purple-500 flex justify-center items-center">
+    <main className="relative min-h-screen bg-white flex justify-center items-center">
       <div className="flex gap-5">
         <Link href="/list-M">
           <div className="w-[500px] h-[500px] rounded-3xl overflow-hidden relative cursor-pointer transform transition-transform duration-300 hover:scale-105 shadow-lg shadow-purple-500/50">

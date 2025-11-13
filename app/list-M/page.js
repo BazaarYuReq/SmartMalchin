@@ -63,7 +63,7 @@ export default function AuthToggle() {
   if (!mounted) return null; // prevent SSR flash
 
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-yellow-500 to-purple-500 p-6 text-black">
+    <main className="min-h-screen flex flex-col items-center justify-center bg-white p-6 text-black">
       <div className="bg-white rounded-2xl shadow-xl w-full max-w-md p-8 relative overflow-hidden transition-all duration-500 ease-in-out">
         <h1 className="text-3xl font-bold text-center mb-6 text-black">
           {isLogin ? "Login" : "Sign Up"}

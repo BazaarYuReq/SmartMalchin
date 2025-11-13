@@ -6,7 +6,7 @@ export default function Category() {
 
   return (
     <main
-      className="bg-gradient-to-br from-yellow-500 to-purple-500 min-h-screen grid grid-cols-2 gap-6 place-items-center p-8"
+      className="bg-whtie min-h-screen grid grid-cols-2 gap-6 place-items-center p-8"
       style={{}}
     >
       {x.map((name, i) => (
