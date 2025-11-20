@@ -11,6 +11,12 @@ export default function Home() {
             src="Smart Malchin.jpg"
             alt="logo"
           />
+          <Link
+            href="/list"
+            className="text-7xl bg-purple-500 hover:underline rounded-lg px-[20px] py-[20px]"
+          >
+            SMART
+          </Link>
         </div>
       </Link>
     </main>
